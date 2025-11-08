@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmfa4bdl4p3pc"]
+[gd_scene load_steps=5 format=3 uid="uid://dmfa4bdl4p3pc"]
 
+[ext_resource type="Script" uid="uid://bfa1lwnfus6rw" path="res://Assets/Prefabs/Player/PlayerController.gd" id="1_07406"]
 [ext_resource type="Texture2D" uid="uid://h5q7slf3t8vr" path="res://Assets/Textures/Human.png" id="1_jic80"]
+[ext_resource type="Script" uid="uid://dlqcce15v0hem" path="res://Assets/Prefabs/Player/PlayerCamera.gd" id="3_5ofd5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_07406"]
 radius = 14.0
 height = 56.0
 
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_07406")
 
 [node name="Image" type="Sprite2D" parent="."]
 texture = ExtResource("1_jic80")
@@ -15,4 +18,7 @@ texture = ExtResource("1_jic80")
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_07406")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player")]
+script = ExtResource("3_5ofd5")
+player = NodePath("..")
+movementSpeed = 100
