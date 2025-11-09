@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dmfa4bdl4p3pc"]
 
-[ext_resource type="Script" uid="uid://bfa1lwnfus6rw" path="res://Assets/Prefabs/Player/PlayerController.gd" id="1_07406"]
+[ext_resource type="Script" uid="uid://bfa1lwnfus6rw" path="res://Assets/Scripts/Player/PlayerController.gd" id="1_07406"]
 [ext_resource type="Texture2D" uid="uid://h5q7slf3t8vr" path="res://Assets/Textures/Human.png" id="1_jic80"]
-[ext_resource type="Script" uid="uid://dlqcce15v0hem" path="res://Assets/Prefabs/Player/PlayerCamera.gd" id="3_5ofd5"]
+[ext_resource type="Script" uid="uid://dlqcce15v0hem" path="res://Assets/Scripts/Player/PlayerCamera.gd" id="3_5ofd5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_07406"]
 radius = 14.0

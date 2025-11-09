@@ -1,7 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://dpsv2m2apgpk8"]
+[gd_scene load_steps=4 format=3 uid="uid://dpsv2m2apgpk8"]
 
-[ext_resource type="PackedScene" uid="uid://dmfa4bdl4p3pc" path="res://Assets/Prefabs/Player/Player.tscn" id="1_hpc76"]
+[ext_resource type="PackedScene" uid="uid://dmfa4bdl4p3pc" path="res://Scenes/Prefabs/Player/Player.tscn" id="1_hpc76"]
+[ext_resource type="Script" uid="uid://svjibha575wj" path="res://Assets/Scripts/Items/ItemManager.gd" id="2_tr2i4"]
+[ext_resource type="PackedScene" uid="uid://ghmek6e71o2u" path="res://Scenes/Prefabs/Items/Item.tscn" id="3_nhkr4"]
 
 [node name="Main Scene" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_hpc76")]
+
+[node name="Items" type="Node2D" parent="."]
+script = ExtResource("2_tr2i4")
+itemFloat = 100004.05
+itemFloatSpeed = 115.695
+
+[node name="Item" parent="Items" instance=ExtResource("3_nhkr4")]
